@@ -7,14 +7,10 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%; /* Ensure the root elements take up full height */
-}
-
 /* Outer frame */
 .outer-frame {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
     border: 1px solid #000;
     background-color: #f0f0f0;
@@ -32,7 +28,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 5vh;
+    height: 25px;
     background-color: #333;
     color: #fff;
     width: 100%;
@@ -49,13 +45,13 @@ html, body {
 }
 
 .time {
-    font-size: 2vh;
+    font-size: 15px;
     position: absolute;
     left: 10px;
 }
 
 .battery {
-    font-size: 2vh;
+    font-size: 15px;
     position: absolute;
     right: 10px;
 }
@@ -68,7 +64,6 @@ html, body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 95vh;
 }
 
 /* Top menu bar */
@@ -80,8 +75,8 @@ html, body {
     background-color: #6262628d;
     border-bottom: 1px solid #ccc;
     width: 100%;
-    height: 5vh;
-    /* flex: 0 0 auto; */
+    height: 25px;
+    flex: 0 0 auto;
     padding: 0 10px;
 }
 
@@ -90,7 +85,7 @@ html, body {
     color: #000;
     text-align: center;
     font-family: 'Merriweather', serif;
-    font-size: 2.5vh;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -118,13 +113,13 @@ html, body {
     background-color: #ccc;
     border-radius: 25px;
     padding: 5px;
-    width: 100px;
-    height: 4vh;
+    width: 60px;
+    height: 20px;
 }
 
 .toggle-circle {
     width: 25px;
-    height: 3.5vh;
+    height: 20px;
     background-color: #fff;
     border-radius: 50%;
     transition: transform 0.3s ease;
@@ -134,13 +129,13 @@ html, body {
 .settings-button {
     position: absolute;
     right: 5%;
-    font-size: 2vh;
+    font-size: 20px;
 }
 
 /* Radar view */
 .radar-view {
     position: relative;
-    flex: 0 0 50%;
+    flex: 1;
     background-color: #e0e0e0;
     width: 100%;
     background-image: url('/Users/louispetro/Library/CloudStorage/OneDrive-Personal/University of Pennsylvania/Courses/Fall 2024/CIS 5120/Homeworks/Radar.png');
@@ -158,7 +153,7 @@ html, body {
 /* Weather bar */
 .weather-bar {
     display: flex;
-    flex: 0 0 10%;
+    flex: 0 0 auto;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ccc;
@@ -170,7 +165,7 @@ html, body {
     color: #DE7439;
     text-align: center;
     font-family: Merriweather;
-    font-size: 6vh;
+    font-size: 50px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -209,10 +204,10 @@ html, body {
 /* Quick access buttons */
 .quick-access {
     display: flex;
+    flex: 0 0 auto;
     justify-content: center;
     align-items: center;
     width: 100%;
-    flex: 0 0 25%;
     border-radius: 2px;
     border: 1px solid rgba(255, 255, 255, 0.10);
     background: #444;
@@ -227,7 +222,10 @@ html, body {
 }
 
 .quick-access-button {
-    width: calc(33.33% - 20px);
+    flex: 1 1 calc(33.33% - 20px); /* Ensure buttons are responsive and maintain aspect ratio */
+    max-width: calc(33.33% - 20px);
+    min-width: 80px;
+    min-height: 80px;
     aspect-ratio: 1;
     background-color: #D9D9D9;
     border-radius: 10px;

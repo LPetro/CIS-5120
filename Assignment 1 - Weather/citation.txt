@@ -31,3 +31,5 @@ My weather app has an outer frame (whole phone), an inner frame (notchbar: which
 How can I make the screen scale with the screen size well. If it's mobile phone/tablet, for instance,
  it auto-shapes well to it? It doesn't need a desktop mode, but if in desktop, just takes the height 
  of the frame and auto-adjusts, but still displays in a phone-looking format/window
+
+When my screen is too wide, my radar image disappears, how can I fix that?
