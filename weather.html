@@ -4,20 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <!-- Link to your CSS file. Replace 'styles.css' with your actual CSS file name -->
     <link rel="stylesheet" href="weatherstyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Weather App</h1>
-    </header>
-
-    <main>
-        <!-- Your weather app content will go here -->
-    </main>
-
-    <footer>
-        <!-- Your footer content will go here -->
-    </footer>
+    <div class="outer-frame">
+        <div class="notchbar">
+            <div class="camera-hole"></div>
+            <div class="time">12:00</div>
+            <div class="battery">100%</div>
+        </div>
+        <div class="viewable-screen">
+            <div class="top-menu-bar">
+                <div class="label">Pro</div>
+                <div class="toggle-button">
+                    <div class="toggle-circle"></div>
+                </div>
+                <div class="label">Home</div>
+                <div class="settings-button">⚙️</div>
+            </div>
+            <div class="radar-view">
+                <div class="search-button">🔍</div>
+            </div>
+            <div class="weather-bar">
+                <div class="temperature">72°F</div>
+                <div class="weather-icon">
+                    <img src="/Users/louispetro/Library/CloudStorage/OneDrive-Personal/University of Pennsylvania/Courses/Fall 2024/CIS 5120/Homeworks/storm_showers.svg" alt="Weather Icon" style="width: 100%; height: 100%;">
+                </div>
+                <div class="high-low">
+                    <span class="high">High: 74°F</span>
+                    <span class="low">Low: 58°F</span>
+                </div>
+            </div>
+            <div class="quick-access">
+                <div class="quick-access-buttons">
+                    <div class="quick-access-button">Button 1</div>
+                    <div class="quick-access-button">Button 2</div>
+                    <div class="quick-access-button">Button 3</div>
+                    <div class="quick-access-button">Button 4</div>
+                    <div class="quick-access-button">Button 5</div>
+                    <div class="quick-access-button">Button 6</div>
+                </div>
+                <div class="hamburger-menu">☰</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

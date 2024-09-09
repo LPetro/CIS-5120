@@ -1,0 +1,244 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* weatherstyles.css */
+
+/* Outer frame */
+.outer-frame {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    border: 1px solid #000;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+/* Notchbar */
+.notchbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+}
+
+.camera-hole {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.time {
+    font-size: 2vh;
+    position: absolute;
+    left: 10px;
+}
+
+.battery {
+    font-size: 2vh;
+    position: absolute;
+    right: 10px;
+}
+
+/* Viewable screen */
+.viewable-screen {
+    flex: 1;
+    background-color: #E1E1E1;
+    display: flex;
+    /* padding: 0 10px; */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Top menu bar */
+.top-menu-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #6262628d;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    flex: 0 0 5%;
+    padding: 0 10px;
+}
+
+.label {
+    flex: 1;
+    text-align: center;
+    font-size: 2.5vh;
+    color: #000;
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.toggle-button {
+    display: flex;
+    align-items: center;
+    background-color: #ccc;
+    border-radius: 25px;
+    padding: 5px;
+    position: relative;
+    width: 100px;
+    height: 30px;
+    margin: 0 10px; /* Add margin to separate from labels */
+}
+
+.toggle-circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    left: 5px; /* Initial position */
+}
+
+.settings-button {
+    font-size: 2vh;
+    /* margin-left: 10px; */
+}
+
+/* Radar view */
+.radar-view {
+    position: relative;
+    flex: 0 0 50%;
+    background-color: #e0e0e0;
+    width: 100%;
+    background-image: url('/Users/louispetro/Library/CloudStorage/OneDrive-Personal/University of Pennsylvania/Courses/Fall 2024/CIS 5120/Homeworks/Radar.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.search-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 2vh;
+}
+
+/* Weather bar */
+.weather-bar {
+    display: flex;
+    flex: 0 0 10%; /* 15% of the viewable screen height */
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.temperature {
+    color: #DE7439;
+    text-align: center;
+    font-family: Merriweather;
+    font-size: 6vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.description {
+    font-size: 2.5vh;
+}
+
+.high-low {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.high {
+    color: #EC0C0C;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.low {
+    color: #0c8fecaa;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Quick access buttons */
+.quick-access {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center;
+    width: 100%;
+    flex: 0 0 35%;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: #444;
+}
+
+.quick-access-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the buttons within the container */
+    gap: 10px; /* Add gap between buttons */
+}
+
+.quick-access-button {
+    width: calc(33.33% - 20px); /* Ensure buttons are perfect cubes */
+    position: relative; /* For positioning the text */
+    background-color: #D9D9D9;
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    color: #2B2B2B;
+    font-size: 2.5vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.quick-access-button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hamburger-menu {
+    font-size: 3vh;
+    margin-left: 10px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .outer-frame {
+        width: 100%;
+        height: 100vh;
+    }
+}
