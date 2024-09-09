@@ -1,0 +1,33 @@
+I used the following apps / websites as inspiration for design, as well as comparisons following the conversations
+I had with those I interviewed:
+https://climeradar.com/ (NOAA - a US standard for radar. Useful for Navy pilot)
+https://myradar.com/ (general radar app, very good in that simplicity)
+https://www.windy.com/ (Useful for Navy surface ship assessments)
+https://www.buienradar.nl/ (from the Netherlands, great for severity of rain, general radar usage, non-US example)
+
+
+I used ChatGPT and the GPT Chat VSCode extension to help template and adjust this code.
+ I used the chat feature to help learn / translate human desires into code changes for moving things around the page.
+ 
+ Example uses: "Can I change my justifying for each element in top menu bar such that they are absolute, relative 
+ only to the menu bar itself, not each other. i.e. the labels (Pro and Home) are centered evenly distributed from
+ the center. The toggle bar is directly centered, and the settings irrespective of others is all the way to the 
+ right with some relative buffer/margin (5%)" 
+
+I used ChatGPT to generate the skeleton CSS code for the weather page and used the chat extension to
+help learn how best to adjust certain aspects to get desired effects. 
+
+I used the following prompts to get me started:
+My weather app has an outer frame (whole phone), an inner frame (notchbar: which consists of a little ellipse
+ for a camera hole, a time, and a battery %) and an inner frame for the viewable screen. The inner frame for 
+ the viewable screen consists of a top menu bar (which itself has a sliding toggle button for Pro <--> Home and
+  a settings button). Beneath that is a radar view taking most of the viewable screen, inside which has a 
+  search button. Beneath that is big weather bar consisting of temperature, description (like Sunny) a high,
+   a low, and an icon for the type of weather (sunny, cloudy, rainy, etc.) Lastly is a frame for quick access
+    buttons, consisting of 6 quickaccess modulized buttons with some text and maybe icons inside of them. 
+    To the right of this within this last frame is a little menu hamburger for customization. I need to recreate
+     all this into an HTML and CSS, but nothing needs to be interactive. It just needs to be a static page.
+
+How can I make the screen scale with the screen size well. If it's mobile phone/tablet, for instance,
+ it auto-shapes well to it? It doesn't need a desktop mode, but if in desktop, just takes the height 
+ of the frame and auto-adjusts, but still displays in a phone-looking format/window

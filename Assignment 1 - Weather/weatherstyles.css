@@ -1,3 +1,5 @@
+/** See citation.txt for citation notes **/
+
 /* CSS Reset */
 * {
     margin: 0;
@@ -5,7 +7,9 @@
     box-sizing: border-box;
 }
 
-/* weatherstyles.css */
+html, body {
+    height: 100%; /* Ensure the root elements take up full height */
+}
 
 /* Outer frame */
 .outer-frame {
@@ -19,6 +23,7 @@
     align-items: center;
     border-radius: 25px;
     overflow: hidden;
+    position: relative;
 }
 
 /* Notchbar */
@@ -60,33 +65,51 @@
     flex: 1;
     background-color: #E1E1E1;
     display: flex;
-    /* padding: 0 10px; */
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 95vh;
 }
 
 /* Top menu bar */
 .top-menu-bar {
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    background-color: #6262628d;
+    /* justify-content: space-between; */
     align-items: center;
+    background-color: #6262628d;
     border-bottom: 1px solid #ccc;
     width: 100%;
-    flex: 0 0 5%;
+    height: 5vh;
+    /* flex: 0 0 auto; */
     padding: 0 10px;
 }
 
 .label {
-    flex: 1;
-    text-align: center;
-    font-size: 2.5vh;
+    position: absolute;
     color: #000;
+    text-align: center;
     font-family: 'Merriweather', serif;
+    font-size: 2.5vh;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.label.pro {
+    left: 15%;
+}
+
+.label.home {
+    right: 15%;
+}
+
+.toggle-button-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
 }
 
 .toggle-button {
@@ -95,25 +118,23 @@
     background-color: #ccc;
     border-radius: 25px;
     padding: 5px;
-    position: relative;
     width: 100px;
-    height: 30px;
-    margin: 0 10px; /* Add margin to separate from labels */
+    height: 4vh;
 }
 
 .toggle-circle {
-    position: absolute;
     width: 25px;
-    height: 25px;
+    height: 3.5vh;
     background-color: #fff;
     border-radius: 50%;
     transition: transform 0.3s ease;
-    left: 5px; /* Initial position */
+    margin-left: 5px;
 }
 
 .settings-button {
+    position: absolute;
+    right: 5%;
     font-size: 2vh;
-    /* margin-left: 10px; */
 }
 
 /* Radar view */
@@ -137,7 +158,7 @@
 /* Weather bar */
 .weather-bar {
     display: flex;
-    flex: 0 0 10%; /* 15% of the viewable screen height */
+    flex: 0 0 10%;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ccc;
@@ -188,29 +209,28 @@
 /* Quick access buttons */
 .quick-access {
     display: flex;
-    justify-content: center; /* Center the buttons horizontally */
+    justify-content: center;
     align-items: center;
     width: 100%;
-    flex: 0 0 35%;
+    flex: 0 0 25%;
     border-radius: 2px;
     border: 1px solid rgba(255, 255, 255, 0.10);
     background: #444;
+    padding: 10px;
 }
 
 .quick-access-buttons {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center the buttons within the container */
-    gap: 10px; /* Add gap between buttons */
+    justify-content: center;
+    gap: 10px;
 }
 
 .quick-access-button {
-    width: calc(33.33% - 20px); /* Ensure buttons are perfect cubes */
-    position: relative; /* For positioning the text */
+    width: calc(33.33% - 20px);
+    aspect-ratio: 1;
     background-color: #D9D9D9;
-    flex-shrink: 0;
     border-radius: 10px;
-    margin: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,13 +241,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-.quick-access-button span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .hamburger-menu {
