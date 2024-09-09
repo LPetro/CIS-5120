@@ -138,6 +138,7 @@
     flex: 1;
     background-color: #e0e0e0;
     width: 100%;
+    min-height: 300px;
     background-image: url('/Users/louispetro/Library/CloudStorage/OneDrive-Personal/University of Pennsylvania/Courses/Fall 2024/CIS 5120/Homeworks/Radar.png');
     background-size: cover;
     background-position: center;
